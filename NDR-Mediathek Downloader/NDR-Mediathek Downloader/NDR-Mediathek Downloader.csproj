@@ -27,7 +27,7 @@
     <TargetCulture>de-DE</TargetCulture>
     <ProductName>NDR Downloader</ProductName>
     <PublisherName>Jonathan Weber</PublisherName>
-    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationRevision>2</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>

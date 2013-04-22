@@ -46,6 +46,12 @@ namespace NDR_Mediathek_Downloader
                         string tmp3 = tmp2[0].Substring(0, tmp2[0].Length - 1);
                         filename = tmp3.Replace("\"","") + ".mp4";
                         filename = filename.Replace(":", " -");
+                        filename = filename.Replace("Ã¼", "ü");
+                        filename = filename.Replace("Ã¶", "ö");
+                        filename = filename.Replace("Ã¤", "ä");
+                        filename = filename.Replace("Ã", "Ü");
+                        filename = filename.Replace("Ã", "Ö");
+                        filename = filename.Replace("Ã", "Ä");
                     }
                 }
             }
@@ -58,6 +64,8 @@ namespace NDR_Mediathek_Downloader
             saveFileDialog1.Title = "Wo soll das Video gespeichert werden?";
             saveFileDialog1.FileName = filename;
             saveFileDialog1.ShowDialog();
+
+            textBox2.Text = "Downloading! - " + textBox2.Text;
 
             if (saveFileDialog1.FileName != "")
             {
@@ -78,7 +86,7 @@ namespace NDR_Mediathek_Downloader
             button1.Enabled = true;
             progressBar1.Value = 0;
             textBox1.Text = "";
-            MessageBox.Show("Download completed!");
+            textBox2.Text = "Download completed! - " + textBox2.Text;
         }
     }
 }
